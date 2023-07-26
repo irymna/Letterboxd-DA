@@ -10,7 +10,8 @@ Resumo do funcionamento da aplicação:
 4. A aplicação exibe os resultados da análise em uma página separada com gráficos interativos.
    
 Funcionalidades adicionais:
-Caso o usuário insira um nome de usuário inválido, a aplicação exibirá uma mensagem de erro solicitando que ele insira um nome de usuário válido.
-A aplicação usa a biblioteca Flask para criar o servidor web e Plotly para gerar os gráficos interativos.
+1. Caso o usuário insira um nome de usuário inválido, a aplicação exibirá uma mensagem de erro solicitando que ele insira um nome de usuário válido.
+2. A aplicação usa a biblioteca Flask para criar o servidor web e Plotly para gerar os gráficos interativos.
+
 Aviso:
 A aplicação está em sua versão beta, e o processo de coleta de dados pode levar um tempo dependendo da quantidade de filmes no perfil do usuário. O projeto pode ser expandido no futuro para adicionar mais funcionalidades e otimizar a coleta de dados.
