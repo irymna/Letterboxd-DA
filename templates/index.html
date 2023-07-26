@@ -10,33 +10,45 @@
 </head>
 <body>
     <h1 class="pt-3"><strong>Letterboxd Data Analysis</strong></h1>
+    <br>
+    <div class="container-texto">
+        <p class="texto">
+            This website extracts information about the movies that users of the Letterboxd 
+            platform consume. Here, you will find out which genres are most watched by any user of 
+            the platform, as well as the years of movie releases they have watched the most, the 
+            most-watched directors, the most-viewed actors and actresses, the most-watched country and 
+            the most-watched language. <br>The result may take 
+            a little time to generate, depending on the number of movies the analyzed user has in 
+            their profile, so I ask for some patience while the graphs are being displayed. 
+            In the future, I plan to add more analyses and speed up the data extraction process. 
+            Please keep in mind that this is a beta version of the project. 
             <br>
-            <div class="container-texto">
-                <p class="texto">
-                        Nearly $7 billion went to federal election candidates during the 2020 campaign cycle from millions
-                        of donors. The increasingly popular ActBlue and WinRed fundraising platforms have made small-dollar
-                        donation data public, allowing us to understand much better than in previous cycles not only where money is
-                        going, but also who it is coming from.
-                </p>
-            </div>
-                <br>
+            <strong>If you don't have a Letterboxd account but want to see how it works, you can use this username: <span style="color: #4CAF50;">bebaagua</strong></span>
+            <br>
+            Have fun!
+        </p>
+        <br>
+    </div>
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
     <section id="form-section">
         <div class="form-container">
-            <p>Informe um username válido do Letterboxd:</p>
+            <p>Please provide a valid Letterboxd username:</p>
             <form action="/result" method="post">
-                <input type="text" name="username" placeholder="Digite seu username" required>
-                <input type="submit" value="Obter dados" class="submit-button">
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <input type="submit" value="Get data" class="submit-button">
             </form>
             <div class="loading-message" id="loadingMessage">
                 <div class="loading-indicator"></div>
-                <p>Carregando... Isso pode demorar um pouco</p>
+                <p>Loading... This might take a moment</p>
             </div>
         </div>
     </section>
     <br><br><br>
     <footer>
         <div class="contact-info">
-            <p>Criado por Iryna Azevedo</p>
+            <p>Created by Iryna Azevedo</p>
             <ul class="social-links mt-4 text-center">
                 <li>
                     <a target="_blank" href="https://www.linkedin.com/in/irymna/">

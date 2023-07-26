@@ -66,7 +66,40 @@ async def perform_analysis(df):
 
     actor_plot = actor_fig.to_html(full_html=False)
 
+    # Mais assistido por país
+    country_counts = df['Country'].value_counts().head(10)
+    country_counts = country_counts.iloc[::-1]
+
+    country_bar = go.Bar(
+        x=country_counts,
+        y=country_counts.index,
+        orientation='h',
+        marker_color='rgba(31, 119, 180, 0.7)'
+    )
+
+    country_fig = go.Figure(data=[country_bar])
+
+    country_plot = country_fig.to_html(full_html=False)
+
+    # Mais assistido por linguagem
+    language_counts = df['Language'].value_counts().head(10)
+    language_counts = language_counts.iloc[::-1]
+
+    language_bar = go.Bar(
+        x=language_counts,
+        y=language_counts.index,
+        orientation='h',
+        marker_color='rgba(31, 119, 180, 0.7)'
+    )
+
+    language_fig = go.Figure(data=[language_bar])
+
+    language_plot = language_fig.to_html(full_html=False)
+
+    # Return all the analysis results including the new ones
     return (
         genre_counts, year_counts, director_counts, actor_counts,
-        genre_plot, year_plot, director_plot, actor_plot
+        genre_plot, year_plot, director_plot, actor_plot,
+        country_counts, language_counts, country_plot, language_plot
     )
+

@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: Arial, sans-serif;
     background-image: url("/static/img/foto.png");
     background-size: cover;
@@ -142,6 +142,7 @@ h2 {
     flex: 1 1 40%; /* Para ajustar o tamanho dos gráficos */
     max-width: 600px;
     display: block;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -159,6 +160,21 @@ h2 {
     margin-top: 5px;
     text-align: center;
 }
+
+/* Estilo para a mensagem de erro */
+.error-message {
+    color: red; /* Defina a cor que desejar */
+    font-size: 14px; /* Defina o tamanho da fonte desejado */
+    font-weight: bold; /* Defina o peso da fonte, se desejar */
+    text-align: center; /* Defina o alinhamento do texto, se necessário */
+    margin-bottom: 10px; /* Ajuste o espaçamento abaixo da mensagem, se necessário */
+}
+
+.return-click {
+    margin-top: 0px;
+    text-align: center
+}
+
 
 footer {
     background-color: #202830;
