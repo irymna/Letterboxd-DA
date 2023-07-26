@@ -4,12 +4,12 @@ O código é uma aplicação web que realiza a análise de dados de filmes do se
 
 Resumo do funcionamento da aplicação:
 
-O usuário acessa o site e insere um nome de usuário do Letterboxd.
-A aplicação realiza o scraping (coleta de dados) dos filmes associados ao usuário no Letterboxd.
-As informações coletadas são processadas para gerar estatísticas e gráficos.
-A aplicação exibe os resultados da análise em uma página separada com gráficos interativos.
+1. O usuário acessa o site e insere um nome de usuário do Letterboxd.
+2. A aplicação realiza o scraping (coleta de dados) dos filmes associados ao usuário no Letterboxd.
+3. As informações coletadas são processadas para gerar estatísticas e gráficos.
+4. A aplicação exibe os resultados da análise em uma página separada com gráficos interativos.
+   
 Funcionalidades adicionais:
-
 Caso o usuário insira um nome de usuário inválido, a aplicação exibirá uma mensagem de erro solicitando que ele insira um nome de usuário válido.
 A aplicação usa a biblioteca Flask para criar o servidor web e Plotly para gerar os gráficos interativos.
 Aviso:
