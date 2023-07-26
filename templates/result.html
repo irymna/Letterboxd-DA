@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Letterboxd Data Analysis</title>
+</head>
+<body>
+    <h1 class="pt-3"><strong>Letterboxd Data Analysis</strong></h1>
+    <br>
+    <section class="container pb-5" id="result-section">
+        <div class="chart-row">
+            <div class="chart-container">
+                <div class="chart-title-container">
+                    <h2>Gêneros mais assistidos:</h2>
+                </div>
+                <iframe srcdoc="{{ genre_plot }}" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title-container">
+                    <h2>Ano mais assistido:</h2>
+                </div>
+                <iframe srcdoc="{{ year_plot }}" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title-container">
+                    <h2>Diretor mais assistido:</h2>
+                </div>
+                <iframe srcdoc="{{ director_plot }}" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title-container">
+                    <h2>Ator mais assistido:</h2>
+                </div>
+                <iframe srcdoc="{{ actor_plot }}" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Criado por Iryna Azevedo</p>
+            <ul class="social-links mt-4 text-center">
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/irymna/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/irymna">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://iryna.up.railway.app/">
+                        <i class="bi bi-globe"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://letterboxd.com/irymna/">
+                        <i class="bi bi-camera-reels-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>

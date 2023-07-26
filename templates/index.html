@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Letterboxd Data Analysis</title>
+</head>
+<body>
+    <h1 class="pt-3"><strong>Letterboxd Data Analysis</strong></h1>
+            <br>
+            <div class="container-texto">
+                <p class="texto">
+                        Nearly $7 billion went to federal election candidates during the 2020 campaign cycle from millions
+                        of donors. The increasingly popular ActBlue and WinRed fundraising platforms have made small-dollar
+                        donation data public, allowing us to understand much better than in previous cycles not only where money is
+                        going, but also who it is coming from.
+                </p>
+            </div>
+                <br>
+    <section id="form-section">
+        <div class="form-container">
+            <p>Informe um username válido do Letterboxd:</p>
+            <form action="/result" method="post">
+                <input type="text" name="username" placeholder="Digite seu username" required>
+                <input type="submit" value="Obter dados" class="submit-button">
+            </form>
+            <div class="loading-message" id="loadingMessage">
+                <div class="loading-indicator"></div>
+                <p>Carregando... Isso pode demorar um pouco</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <footer>
+        <div class="contact-info">
+            <p>Criado por Iryna Azevedo</p>
+            <ul class="social-links mt-4 text-center">
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/irymna/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/irymna">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://iryna.up.railway.app/">
+                        <i class="bi bi-globe"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://letterboxd.com/irymna/">
+                        <i class="bi bi-camera-reels-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/script.js"></script>
+    <script>
+        document.querySelector('.submit-button').addEventListener('click', function() {
+            document.querySelector('.submit-button').style.display = 'none';
+            document.getElementById('loadingMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
