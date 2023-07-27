@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from scraping import scrape_letterboxd
 from analysis import perform_analysis
 import asyncio
+import os
 
 app = Flask(__name__)
 
