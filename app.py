@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from scraping import scrape_letterboxd
 from analysis import perform_analysis
 import asyncio
-import os
 
 app = Flask(__name__)
 
@@ -35,4 +34,4 @@ async def result():
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(app.run(debug=True))
+    loop.run_until_complete(app.run())
