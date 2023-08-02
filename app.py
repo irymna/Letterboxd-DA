@@ -16,17 +16,17 @@ async def result():
     try:
         df = await scrape_letterboxd(username)
         (
-            genre_counts, year_counts, director_counts, actor_counts,
-            genre_plot, year_plot, director_plot, actor_plot,
+            genre_counts, director_counts, actor_counts,
+            genre_plot, director_plot, actor_plot,
             country_counts, language_counts, country_plot, language_plot
         ) = await perform_analysis(df)
 
         return render_template('result.html', username=username,
-                               genre_counts=genre_counts, year_counts=year_counts,
+                               genre_counts=genre_counts,
                                director_counts=director_counts, actor_counts=actor_counts,
-                               genre_plot=genre_plot, year_plot=year_plot,
-                               director_plot=director_plot, actor_plot=actor_plot,
-                               country_counts=country_counts, language_counts=language_counts,
+                               genre_plot=genre_plot, director_plot=director_plot, 
+                               actor_plot=actor_plot, country_counts=country_counts, 
+                               language_counts=language_counts,
                                country_plot=country_plot, language_plot=language_plot)
     except:
         error_message = "Invalid username. Please enter a valid Letterboxd username and try again."

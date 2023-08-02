@@ -21,21 +21,6 @@ async def perform_analysis(df):
 
     genre_plot = genre_fig.to_html(full_html=False)
 
-    # Ano mais assistido
-    year_counts = df['Year'].value_counts().head(10)
-    year_counts = year_counts.iloc[::-1]
-
-    year_bar = go.Bar(
-        x=year_counts,
-        y=year_counts.index,
-        orientation='h',
-        marker_color='rgba(31, 119, 180, 0.7)'
-    )
-
-    year_fig = go.Figure(data=[year_bar])
-
-    year_plot = year_fig.to_html(full_html=False)
-
     # Mais assistido por diretor
     director_counts = df['Director'].value_counts().head(10)
     director_counts = director_counts.iloc[::-1]
@@ -98,8 +83,8 @@ async def perform_analysis(df):
 
     # Return all the analysis results including the new ones
     return (
-        genre_counts, year_counts, director_counts, actor_counts,
-        genre_plot, year_plot, director_plot, actor_plot,
+        genre_counts, director_counts, actor_counts,
+        genre_plot, director_plot, actor_plot,
         country_counts, language_counts, country_plot, language_plot
     )
 
